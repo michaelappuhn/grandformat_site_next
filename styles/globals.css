@@ -26,10 +26,9 @@ body {
 }
 
 ::selection{
+  /*background-color: none;*/
   color: #00587B;
-  /*color: #00587B;*/
-  /*background-color: #67B698;*/
-  background-color: none;
+  background-color: #67B698;
 }
 
 .varCondensedBold{
