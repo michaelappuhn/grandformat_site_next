@@ -2,7 +2,7 @@ import Image from "next/image";
 import { instrument, spaceGrotesk } from "@/styles/font";
 import {Nav, Navitem} from "@/components/navbar";
 
-export default function Home() {
+export default function About() {
   return (
     <div
       className={`font-sans grid grid-rows-[10px_1fr_10px] min-h-screen p-8 pb-20 gap-16 sm:p-20`}
@@ -17,20 +17,19 @@ export default function Home() {
                 ${instrument.className} 
                 varCondensedBold 
                 gfLogo 
-                md:-ml-5 
-                text-[24vw] 
-                :text-[25vw]`}>
-            Grand Format
+                text-[40pt]
+            `}>
+            About
         </div>
         <div 
-            className={
-                `${spaceGrotesk.className} 
+            className={`
+                ${spaceGrotesk.className} 
                 dek 
-                sm:text-[18pt] 
-                md:text-[24pt] 
+                text-[24pt]
+                md:text-[40pt]
             `}
         >
-            We design solutions to <a href="https://en.wikipedia.org/wiki/Wicked_problem" target="_blank">wicked problems</a>.
+            <span class={`${instrument.className}`}>Grand Format</span> is a human-centered product development and design agency that brings enterprise-level innovation methods to small and mid-sized businesses. 
         </div>
       </main>
 
