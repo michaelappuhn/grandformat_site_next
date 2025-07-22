@@ -3,12 +3,14 @@ import styles from "./navbar.module.scss";
 const nav_items = [
     {text: 'Home', url: '/'},
     {text: 'About', url: '/about'},
+    {text: 'Services', url: '/services'},
+    {text: 'Contact', url: '/contact'},
 
 ];
 
 export function Nav () {
     return (
-          <header className=" navbar sticky top-0 flex gap-[12px] flex-wrap items-center justify-center">
+          <header className=" navbar sticky top-0 flex gap-[50px] flex-wrap ">
 
       {nav_items.map((item, index) => (
        <Navitem
@@ -24,9 +26,8 @@ export function Nav () {
 function Navitem ({text, url}) {
     return (
         <a
-
-          className={
-              ` ${styles.navbar__item}
+          className={`
+              ${styles.navbar__item}
               flex 
               gap-2 
           `}

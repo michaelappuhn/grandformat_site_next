@@ -1,10 +1,10 @@
-@use "colors";
 @use "tailwindcss";
+@use "./colors";
 
 
 :root {
-  --background: variables.$primary_color;
-  --foreground: variables.$secondary_color;
+  --background: colors.$base;
+  --foreground: colors.$secondary;
 }
 
 @theme inline {
@@ -16,15 +16,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: color.$base;
-    --foreground: #67B698;
+    --background: colors.$base;
+    --foreground: colors.$primary;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: colors.$base;
+  color: colors.$secondary;
 }
 
 ::selection{
@@ -42,3 +41,4 @@ body {
     letter-spacing: -.013em;
     text-transform: uppercase !important;
 }
+

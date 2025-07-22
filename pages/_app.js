@@ -3,7 +3,10 @@ import { instrument, spaceGrotesk } from "@/styles/font";
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${instrument.className} ${spaceGrotesk.className}`}>
+    <main className={`
+        ${instrument.className} 
+        ${spaceGrotesk.className}`}
+    >
       <Component {...pageProps} />
     </main>
   );
