@@ -1,0 +1,15 @@
+@use "../colors";
+
+.gfLogo{
+    line-height: .8em;
+    letter-spacing: -.013em;
+    text-transform: uppercase !important;
+    color: colors.$secondary;
+}
+
+.dek{
+    color: colors.$primary;
+    font-weight: 700;
+    font-size: 24px;
+
+}

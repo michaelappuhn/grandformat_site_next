@@ -36,9 +36,12 @@ body {
     font-variation-settings: 'wdth' 75, 'wght' 700;
 }
 
-.gfLogo{
-    line-height: .8em;
-    letter-spacing: -.013em;
-    text-transform: uppercase !important;
-}
 
+a{
+    color: colors.$secondary;
+    &:hover{
+        color: colors.$tertiary--hover;
+    }
+    
+
+}

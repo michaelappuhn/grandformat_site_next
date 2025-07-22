@@ -13,11 +13,19 @@ export default function Home() {
           className="flex flex-col gap-[10px] row-start-2 sm:items-start"
       >
         <div 
-            className={`${instrument.className} varCondensedBold gfLogo md:-ml-6 text-[28vw] md:text-[25vw]`}>
+            className={`
+                ${instrument.className} 
+                varCondensedBold 
+                gfLogo 
+                md:-ml-6 
+                text-[24vw] 
+                md:text-[25vw]`}>
             Grand Format
         </div>
-        <div className={`${instrument.className} flex gap-4 items-center `}>
-        We design solutions to wicked problems.
+        <div 
+            className={`${spaceGrotesk.className} dek `}
+        >
+            We design solutions to <a href="https://en.wikipedia.org/wiki/Wicked_problem" target="_blank">wicked problems</a>.
         </div>
       </main>
 
