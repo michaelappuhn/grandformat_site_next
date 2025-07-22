@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { instrument, spaceGrotesk } from "@/styles/font";
-import Nav from "@/components/navbar";
+import {Nav, Navitem} from "@/components/navbar";
 
 export default function Home() {
   return (

@@ -1,0 +1,16 @@
+@use "../styles/colors";
+
+.navbar {
+    
+}
+
+.navbar__item {
+    font-weight: 800;
+    font-variation-settings: 'wght' 800;
+    color: colors.$primary_color;
+
+    &:hover{
+        color: colors.$secondary_color;
+    }
+}
+

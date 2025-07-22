@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
 import { instrument, spaceGrotesk } from "@/styles/font";
 
 export default function App({ Component, pageProps }) {
