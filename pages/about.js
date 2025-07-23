@@ -14,12 +14,16 @@ export default function About() {
       >
         <div 
             className={`
-                ${instrument.className} 
-                varCondensedBold 
-                gfLogo 
-                text-[40pt]
             `}>
-            About
+            <h1
+                className={`
+                    ${instrument.className} 
+                    varCondensedBold 
+                    md:text-[60pt]
+                    text-[60pt]
+                `}>
+                    About
+            </h1>
         </div>
         <div 
             className={`
@@ -29,7 +33,7 @@ export default function About() {
                 md:text-[40pt]
             `}
         >
-            <span class={`${instrument.className}`}>Grand Format</span> is a human-centered product development and design agency that brings enterprise-level innovation methods to small and mid-sized businesses. 
+            <span class={`name`}>Grand Format</span> is a product development and design agency that brings the tech-industry's innovation techniques to small and mid-sized businesses. 
         </div>
       </main>
 

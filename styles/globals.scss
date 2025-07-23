@@ -32,10 +32,6 @@ body {
   background-color: #67B698;
 }
 
-.varCondensedBold{
-    font-variation-settings: 'wdth' 75, 'wght' 700;
-}
-
 
 a{
     color: colors.$secondary;
@@ -45,3 +41,21 @@ a{
     
 
 }
+
+.gfLogo{
+    line-height: .8em;
+    letter-spacing: -.013em;
+    text-transform: uppercase !important;
+}
+/* Secondary pages */
+
+h1{
+    font-size: 45px;
+
+}
+
+.varCondensedBold{
+    font-variation-settings: 'wdth' 75, 'wght' 700;
+}
+
+

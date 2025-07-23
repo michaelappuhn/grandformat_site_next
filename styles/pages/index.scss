@@ -1,6 +1,6 @@
 @use "../colors";
 
-.gfLogo{
+h1.gfLogo{
     line-height: .8em;
     letter-spacing: -.013em;
     text-transform: uppercase !important;
@@ -10,4 +10,8 @@
 .dek{
     color: colors.$primary;
     font-weight: 700;
+}
+
+.approachBanner{
+    background-color: colors.$primary;
 }
