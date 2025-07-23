@@ -36,6 +36,7 @@ export default function Home() {
 
             </main>
 
+            // I want this section to be full-width, so I can alter the background styling completely. AI!
             <section className={`
                 ${instrument.className}
                 approachBanner
