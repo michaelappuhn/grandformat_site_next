@@ -36,10 +36,11 @@ export default function Home() {
 
             </main>
 
-            // I want this section to be full-width, so I can alter the background styling completely. AI!
             <section className={`
                 ${instrument.className}
                 approachBanner
+                ml-[-2rem] mr-[-2rem]
+                sm:ml-[-5rem] sm:mr-[-5rem]
             `}>
                 <div class="">
                     <h2>Our approach</h2>
