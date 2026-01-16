@@ -1,7 +1,9 @@
 import { Instrument_Sans, Space_Grotesk } from "next/font/google";
+
 export const instrument = Instrument_Sans({
   variable: "--font-instrument",
-  axes: ['wght', 'wdth'],
+  //axes: ['wght', 'wdth'],
+  axes: ['wdth'],
   subsets: ["latin"],
 });
 

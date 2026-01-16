@@ -5,7 +5,7 @@ import {Nav, Navitem} from "@/components/navbar";
 export default function Home() {
     return (
         <div
-            className={`font-sans grid grid-rows-[10px_1fr_10px] min-h-screen p-8 pb-20 gap-16 sm:p-20`}
+            className={`font-sans grid grid-rows-[10px_1fr_auto] min-h-screen p-8 pb-20 gap-16 sm:p-20`}
         >
 
             <Nav />
@@ -28,7 +28,6 @@ export default function Home() {
                     `${spaceGrotesk.className} 
                     dek 
                     sm:text-[18pt] 
-                    md:text-[24pt] 
                 `}
             >
                 We design solutions to <a href="https://en.wikipedia.org/wiki/Wicked_problem" target="_blank">wicked problems</a>.
@@ -41,6 +40,7 @@ export default function Home() {
                 approachBanner
                 ml-[-2rem] mr-[-2rem]
                 sm:ml-[-5rem] sm:mr-[-5rem]
+                row-start-3
             `}>
                 <div class="">
                     <h2>Our approach</h2>

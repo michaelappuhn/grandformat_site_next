@@ -5,7 +5,7 @@ import {Nav, Navitem} from "@/components/navbar";
 export default function About() {
   return (
     <div
-      className={`font-sans grid grid-rows-[10px_1fr_10px] min-h-screen p-8 pb-20 gap-16 sm:p-20`}
+      className={`font-sans grid grid-rows-[10px_1fr_auto] min-h-screen p-8 pb-20 gap-16 sm:p-20`}
     >
 
       <Nav />
@@ -18,6 +18,7 @@ export default function About() {
             <h1
                 className={`
                     ${instrument.className} 
+                    page_head
                     varCondensedBold 
                     md:text-[60pt]
                     text-[60pt]
