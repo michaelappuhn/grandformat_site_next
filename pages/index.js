@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { instrument, spaceGrotesk } from "@/styles/font";
-import {Nav, Navitem} from "@/components/navbar";
+import {Nav} from "@/components/navbar";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
                     sm:text-[18pt] 
                 `}
             >
-                We design solutions to <a href="https://en.wikipedia.org/wiki/Wicked_problem" target="_blank">wicked problems</a>.
+                We design solutions to <a href="https://en.wikipedia.org/wiki/Wicked_problem" target="_blank" rel="noreferrer">wicked problems</a>.
             </h1>
 
             </main>
@@ -44,7 +44,7 @@ export default function Home() {
                 sm:ml-[-5rem] sm:mr-[-5rem]
                 row-start-3
             `}>
-                <div class="">
+                <div className="">
                     <h2>Our approach</h2>
                 </div>
             </section>
