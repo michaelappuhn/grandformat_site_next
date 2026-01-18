@@ -10,11 +10,14 @@ export default function PhotocopyBackground() {
         // Only run on client
         if (typeof window === 'undefined') return;
 
+        let mounted = true;
+        let idleId;
         let p5Instance = null;
+
         const initP5 = async () => {
             const p5 = (await import('p5')).default;
             p5.disableFriendlyErrors = true;
-            if (!containerRef.current) return;
+            if (!containerRef.current || !mounted) return;
 
             const sketch = function(p) {
                 const TILT = 40;
@@ -131,15 +134,30 @@ export default function PhotocopyBackground() {
             p5Ref.current = p5Instance;
         };
 
-        initP5();
+        const scheduleP5 = () => {
+            if (window.requestIdleCallback) {
+                idleId = window.requestIdleCallback(() => initP5(), { timeout: 2000 });
+            } else {
+                // fallback for browsers that don't support requestIdleCallback
+                setTimeout(() => initP5(), 1);
+            }
+        };
+
+        scheduleP5();
 
         return () => {
+            mounted = false;
+            if (idleId && window.cancelIdleCallback) {
+                window.cancelIdleCallback(idleId);
+            }
             if (p5Ref.current) {
                 p5Ref.current.remove();
                 p5Ref.current = null;
             }
         };
     }, []);
+
+    const backgroundGradient = 'linear-gradient(to bottom, #000814 0%, #00010C 10%, #0C2B2F 30%, #2F564B 60%, #5F996F 80%, #7AC381 90%, #68AF6E 98%, #9FE083 100%)';
 
     return (
         <div
@@ -152,6 +170,8 @@ export default function PhotocopyBackground() {
                 height: '100%',
                 zIndex: -1,
                 overflow: 'hidden',
+                backgroundImage: backgroundGradient,
+                backgroundSize: '100% 100%',
             }}
         />
     );
