@@ -4,6 +4,7 @@ import {Nav} from "@/components/navbar";
 import Dek from "@/components/Dek";
 import Logo from "@/components/Logo";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
+import { libreFranklin,firaMono } from "@/styles/font";
 
 export default function Home() {
     return (
@@ -22,7 +23,7 @@ export default function Home() {
             </main>
 
             <section className={`
-                ${instrument.className}
+                ${libreFranklin.className}
                 approachBanner
                 ml-[-2rem] mr-[-2rem]
                 sm:ml-[-5rem] sm:mr-[-5rem]
@@ -32,6 +33,7 @@ export default function Home() {
                     <h2>Our approach</h2>
                 </div>
             </section>
+
         </div>
   );
 }

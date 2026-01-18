@@ -10,7 +10,7 @@ const nav_items = [
 
 export function Nav () {
     return (
-          <header className=" navbar sticky top-0 flex gap-[50px] flex-wrap ">
+          <header className=" {styles.navbar} sticky top-0 flex gap-[50px] flex-wrap ">
 
       {nav_items.map((item, index) => (
        <Navitem
