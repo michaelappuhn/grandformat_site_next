@@ -101,20 +101,24 @@ export default function PhotocopyBackground() {
                 }
 
                 p.setup = function() {
-                    const container = p.canvas ? p.canvas.parent() : containerRef.current;
-                    const w = container.clientWidth;
-                    const h = container.clientHeight;
-                    const c = p.createCanvas(w, h);
-                    c.style('width', '100%');
-                    c.style('height', '100%');
+                    const container = containerRef.current;
+                    if (!container) return;
+                    let w = container.clientWidth;
+                    let h = container.clientHeight;
+                    if (w <= 0) w = 1;
+                    if (h <= 0) h = 1;
+                    p.createCanvas(w, h);
                     p.noLoop();
                     drawTexture();
                 };
 
                 p.windowResized = function() {
-                    const container = p.canvas ? p.canvas.parent() : containerRef.current;
-                    const w = container.clientWidth;
-                    const h = container.clientHeight;
+                    const container = containerRef.current;
+                    if (!container) return;
+                    let w = container.clientWidth;
+                    let h = container.clientHeight;
+                    if (w <= 0) w = 1;
+                    if (h <= 0) h = 1;
                     p.resizeCanvas(w, h);
                     drawTexture();
                 };
