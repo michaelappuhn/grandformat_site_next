@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { instrument, spaceGrotesk } from "@/styles/font";
 import {Nav, Navitem} from "@/components/navbar";
+import PhotocopyBackground from "@/components/PhotocopyBackground";
 
 export default function Home() {
     return (
         <div
-            className={`font-sans grid grid-rows-[10px_1fr_auto] min-h-screen p-8 pb-20 gap-16 sm:p-20`}
+            className={`font-sans grid grid-rows-[10px_1fr_auto] min-h-screen p-8 pb-20 gap-16 sm:p-20 relative overflow-hidden`}
         >
+            <PhotocopyBackground />
 
             <Nav />
             <main 
