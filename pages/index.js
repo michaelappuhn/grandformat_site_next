@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { firaMono, instrument, libreFranklin, spaceGrotesk } from "@/styles/font";
+import { instrument } from "@/styles/font";
 import {Nav} from "@/components/navbar";
 import Dek from "@/components/Dek";
+import Logo from "@/components/Logo";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
-import { Fira_Mono } from "next/font/google";
 
 export default function Home() {
     return (
@@ -15,18 +15,7 @@ export default function Home() {
             <main 
               className="flex flex-col gap-[10px] row-start-2 sm:items-start"
             >
-            <div 
-                className={`
-                    ${libreFranklin.className} 
-                    varCondensedBold 
-                    gfLogo 
-                    sm:-ml-2 
-                    md:-ml-5 
-                    text-[90pt] 
-                    md:text-[90pt]`}>
-                Grand<br /> Format
-            </div> 
-            //<!-- AI! Please turn this into a "logo" component in /components  -->
+            <Logo />
             <Nav />
             <Dek />
 
