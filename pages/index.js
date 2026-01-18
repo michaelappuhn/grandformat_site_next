@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { instrument, spaceGrotesk } from "@/styles/font";
+import { firaMono, instrument, libreFranklin, spaceGrotesk } from "@/styles/font";
 import {Nav} from "@/components/navbar";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
+import { Fira_Mono } from "next/font/google";
 
 export default function Home() {
     return (
@@ -16,18 +17,18 @@ export default function Home() {
             >
             <div 
                 className={`
-                    ${instrument.className} 
+                    ${libreFranklin.className} 
                     varCondensedBold 
                     gfLogo 
                     sm:-ml-2 
                     md:-ml-5 
-                    text-[24vw] 
-                    md:text-[25vw]`}>
+                    text-[90pt] 
+                    md:text-[90pt]`}>
                 Grand Format
             </div>
             <h1
                 className={
-                    `${spaceGrotesk.className} 
+                    `${firaMono.className} 
                     dek 
                     sm:text-[18pt] 
                 `}
