@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { firaMono, instrument, libreFranklin, spaceGrotesk } from "@/styles/font";
 import {Nav} from "@/components/navbar";
+import Dek from "@/components/Dek";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
 import { Fira_Mono } from "next/font/google";
 
@@ -26,15 +27,7 @@ export default function Home() {
                     md:text-[90pt]`}>
                 Grand Format
             </div>
-            <h1
-                className={
-                    `${firaMono.className} 
-                    dek 
-                    sm:text-[18pt] 
-                `}
-            >
-                We design solutions to <a href="https://en.wikipedia.org/wiki/Wicked_problem" target="_blank" rel="noreferrer">wicked problems</a>.
-            </h1>
+            <Dek />
 
             </main>
 
