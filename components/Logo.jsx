@@ -5,7 +5,6 @@ export default function Logo() {
         <div 
             className={`
                 ${libreFranklin.className} 
-                varCondensedBold 
                 gfLogo 
                 sm:-ml-2 
                 md:-ml-5 
