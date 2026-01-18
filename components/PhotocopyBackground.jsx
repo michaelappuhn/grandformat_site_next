@@ -13,9 +13,10 @@ export default function PhotocopyBackground() {
         let p5Instance = null;
         const initP5 = async () => {
             const p5 = (await import('p5')).default;
+            p5.disableFriendlyErrors = true;
             if (!containerRef.current) return;
 
-            const sketch = (p) => {
+            const sketch = function(p) {
                 const TILT = 40;
 
                 const r = (a = 1) => p.random(a);
