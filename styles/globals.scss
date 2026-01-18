@@ -44,23 +44,5 @@ a{
 
 }
 
-// AI put this into a separate "styles/components/logo.scss" file
-.gfLogo{
-    line-height: .8em;
-    letter-spacing: -.013em;
-    text-transform: uppercase !important;
-}
-/* Secondary pages */
-
-// AI put this into a separate "styles/components/dek.scss" file
-h1.page_head{
-    font-size: 45pt;
-
-}
-
-.varCondensedBold{
-    font-variation-settings: 'wdth' 75, 'wght' 700;
-}
-// AI this doesn't need  to be here anymore, please remove it from the various /component className definitions AI!
 
 
