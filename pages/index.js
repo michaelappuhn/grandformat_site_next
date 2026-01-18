@@ -12,7 +12,6 @@ export default function Home() {
         >
             <PhotocopyBackground />
 
-            <Nav />
             <main 
               className="flex flex-col gap-[10px] row-start-2 sm:items-start"
             >
@@ -25,8 +24,10 @@ export default function Home() {
                     md:-ml-5 
                     text-[90pt] 
                     md:text-[90pt]`}>
-                Grand Format
-            </div>
+                Grand<br /> Format
+            </div> 
+            //<!-- AI! Please turn this into a "logo" component in /components  -->
+            <Nav />
             <Dek />
 
             </main>
