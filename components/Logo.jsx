@@ -8,7 +8,7 @@ export default function Logo() {
                 gfLogo 
                 sm:-ml-2 
                 md:-ml-5 
-                text-[90pt] 
+                text-[50pt] 
                 md:text-[90pt]`}>
             Grand<br /> Format
         </div> 
