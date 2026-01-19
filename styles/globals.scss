@@ -5,11 +5,13 @@
 :root {
   --background: colors.$base;
   --foreground: colors.$secondary;
+  --primary: colors.$primary;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
   --font-sans: var(--font-libre-franklin);
   --font-mono: var(--font-fira-mono);
 }

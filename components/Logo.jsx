@@ -7,6 +7,7 @@ export default function Logo() {
             className={`
                 ${libreFranklin.className} 
                 ${styles.gfLogo}
+                text-primary
                 sm:-ml-2 
                 md:-ml-5 
                 text-[50pt] 
