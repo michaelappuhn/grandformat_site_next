@@ -1,3 +1,4 @@
+import { libreFranklin,firaMono } from "@/styles/font";
 import styles from "./navbar.module.scss";
 
 const nav_items = [
@@ -10,7 +11,13 @@ const nav_items = [
 
 export function Nav () {
     return (
-          <header className=" {styles.navbar} sticky top-0 flex gap-[50px] flex-wrap ">
+          <header className="
+            {styles.navbar}
+            ${firaMono.className}
+            sticky top-0 flex gap-[50px] flex-wrap 
+            mt-[12pt]
+            leading-[1]
+        ">
 
       {nav_items.map((item, index) => (
        <Navitem
@@ -27,6 +34,7 @@ function Navitem ({text, url}) {
     return (
         <a
           className={`
+              ${firaMono.className}
               ${styles.navbar__item}
               flex 
               gap-2 
