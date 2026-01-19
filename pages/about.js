@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {Nav, Navitem} from "@/components/navbar";
+import PhotocopyBackground from "@/components/PhotocopyBackground";
 
 export default function About() {
   return (
@@ -11,6 +12,7 @@ export default function About() {
       <main 
           className="flex flex-col gap-[10px] row-start-2 sm:items-start"
       >
+        <PhotocopyBackground />
         <div 
             className={`
             `}>
