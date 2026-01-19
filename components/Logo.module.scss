@@ -1,6 +1,10 @@
+@use "../styles/colors";
+
 .gfLogo {
     line-height: .95em;
+    color: colors.$primary;
     letter-spacing: -.013em;
     text-transform: uppercase !important;
-    font-variation-settings: 'wdth' 75, 'wght' 700;
+    font-weight: 800;
 }
+
