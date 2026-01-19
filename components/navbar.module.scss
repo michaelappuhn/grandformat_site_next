@@ -1,14 +1,13 @@
 @use "../styles/colors";
 
 .navbar {
-    
+    color: colors.$primary;
 }
 
 .navbar__item {
     font-size: 18px;
     font-weight: 700;
-    font-variation-settings: 'wght' 800;
-    color: colors.$primary;
+    color: colors.$tertiary--hover;
 
     &:hover{
         color: colors.$secondary;

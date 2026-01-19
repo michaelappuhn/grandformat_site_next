@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>7 - Photocopy Texture – p5.js</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- p5.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/p5.min.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000814;
+      /*min-height: 150vh; *//* allow scroll if desired */
+    }
+    canvas {
+      display: block;
+      z-index: 0;
+      top: 0;
+      position: absolute;
+    }
+  </style>
+
+  <style>
+    .test{
+        z-index: 500;
+        position: relative;
+    }
+    .test h1{
+        color: #fff;
+        padding: 5vh;
+        font-size: 18pt;
+        font-family: Helvetica;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="test">
+    <h1> Test </h1>
+    <h1> Test </h1>
+    <h1> Test </h1>
+    <h1> Test </h1>
+    <h1> Test </h1>
+    <h1> Test </h1>
+    <h1> Test </h1>
+    <h1> Test </h1>
+    <h1> Test </h1>
+    <h1> Test </h1>
+</div>
+
+<script>
+function setup() {
+  const c = createCanvas(1400, 1400);
+  c.parent(document.body);
+  noLoop();
+
+  // mimic your DOM sizing behavior
+  c.style("width", `${c.parent().clientWidth}px`);
+  c.style("height", `${c.parent().clientHeight * 1.5}px`);
+
+  drawTexture();
+}
+
+function drawTexture() {
+  const W = width;
+  const H = height;
+  const TILT = 40;
+
+  const r = (a = 1) => random(a);
+
+  // ---- base gradient (top → bottom, multi-stop) ----
+  for (let y = 0; y < H; y++) {
+    const t = y / H;
+    let col;
+
+    if (t < 0.1)
+      col = lerpColor(color("#000814"), color("#00010C"), t / 0.1);
+    else if (t < 0.3)
+      col = lerpColor(color("#00010C"), color("#0C2B2F"), (t - 0.1) / 0.2);
+    else if (t < 0.6)
+      col = lerpColor(color("#0C2B2F"), color("#2F564B"), (t - 0.3) / 0.3);
+    else if (t < 0.8)
+      col = lerpColor(color("#2F564B"), color("#5F996F"), (t - 0.6) / 0.2);
+    else if (t < 0.9)
+      col = lerpColor(color("#5F996F"), color("#7AC381"), (t - 0.8) / 0.1);
+    else if (t < 0.98)
+      col = lerpColor(color("#7AC381"), color("#68AF6E"), (t - 0.9) / 0.08);
+    else
+      col = lerpColor(color("#68AF6E"), color("#9FE083"), (t - 0.98) / 0.02);
+
+    stroke(col);
+    line(0, y, W, y);
+  }
+
+  // ---- subtle horizontal banding (tilted) ----
+  noStroke();
+  for (let y = 0; y < H; y += 1){
+
+    const shade = 200 + r(40);
+    const dy = y + r(TILT) - TILT / 2;
+    fill(shade, 0.12 * 255);
+    rect(0, dy, W, 1);
+  }
+
+  // ---- large uneven horizontal streaks (tilted) ----
+  for (let i = 0; i < 18; i++) {
+    const baseY = r(H);
+    const h = 9 + r(90);
+    const dy = baseY + r(TILT) - TILT / 2;
+    fill(0, r(0.3) * 255 * 0.08);
+    rect(0, dy, W, h);
+  }
+
+  // ---- horizontal scratch lines (tilted) ----
+  stroke(0, 0.52 * 255);
+  strokeWeight(0.2);
+  for (let i = 0; i < 30; i++) {
+    const baseY = r(H);
+    const dyStart = baseY + r(TILT) - TILT / 2;
+    const dyEnd = dyStart + (r(TILT) - TILT / 2);
+    line(0, dyStart, W, dyEnd);
+  }
+
+// ---- subtle density haze (no blobs) ----
+loadPixels();
+noiseSeed(3);
+for (let y = 0; y < H; y++) {
+  for (let x = 0; x < W; x++) {
+    const i = 4 * (y * W + x);
+    const n = noise(x * 0.002, y * 0.002);
+    const d = map(n, 0, 1, -6, 6);
+    pixels[i]     += d;
+    pixels[i + 1] += d;
+    pixels[i + 2] += d;
+  }
+}
+updatePixels();
+
+
+  // ---- grain / speckle ----
+  loadPixels();
+  for (let i = 0; i < pixels.length; i += 4) {
+    const n = r(50) - 25;
+    pixels[i]     = constrain(pixels[i]     + n, 0, 255);
+    pixels[i + 1] = constrain(pixels[i + 1] + n, 0, 255);
+    pixels[i + 2] = constrain(pixels[i + 2] + n, 0, 255);
+  }
+  updatePixels();
+}
+</script>
+
+</body>
+</html>
