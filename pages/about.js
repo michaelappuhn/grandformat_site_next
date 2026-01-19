@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { instrument, spaceGrotesk } from "@/styles/font";
 import {Nav, Navitem} from "@/components/navbar";
 
 export default function About() {
@@ -17,7 +16,7 @@ export default function About() {
             `}>
             <h1
                 className={`
-                    ${instrument.className} 
+                    font-sans 
                     page_head
                     varCondensedBold 
                     md:text-[60pt]
@@ -28,7 +27,7 @@ export default function About() {
         </div>
         <div 
             className={`
-                ${spaceGrotesk.className} 
+                font-sans 
                 dek 
                 text-[24pt]
                 md:text-[40pt]

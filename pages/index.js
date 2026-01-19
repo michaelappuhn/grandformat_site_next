@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { instrument } from "@/styles/font";
 import {Nav} from "@/components/navbar";
 import Dek from "@/components/Dek";
 import Logo from "@/components/Logo";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
-import { libreFranklin,firaMono } from "@/styles/font";
 
 export default function Home() {
     return (
@@ -23,7 +21,7 @@ export default function Home() {
             </main>
 
             <section className={`
-                ${libreFranklin.className}
+                font-sans
                 approachBanner
                 ml-[-2rem] mr-[-2rem]
                 sm:ml-[-5rem] sm:mr-[-5rem]

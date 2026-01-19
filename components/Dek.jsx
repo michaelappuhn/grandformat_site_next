@@ -1,12 +1,10 @@
 import styles from './Dek.module.scss'
 
-import { firaMono } from "@/styles/font";
-
 export default function Dek() {
     return (
         <h1
             className={
-                `${firaMono.className} 
+                `font-mono 
                 dek 
                 sm:text-[18pt] 
                 styles.page_head

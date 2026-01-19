@@ -1,11 +1,10 @@
-import { libreFranklin } from "@/styles/font";
 import styles from "./Logo.module.scss"
 
 export default function Logo() {
     return (
         <div 
             className={`
-                ${libreFranklin.className} 
+                font-sans 
                 ${styles.gfLogo}
                 text-primary
                 sm:-ml-2 
