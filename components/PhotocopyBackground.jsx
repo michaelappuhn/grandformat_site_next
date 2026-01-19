@@ -5,6 +5,8 @@ import { useEffect, useRef } from 'react';
 export default function PhotocopyBackground() {
     const containerRef = useRef(null);
     const p5Ref = useRef(null);
+    const mousePosRef = useRef({ x: 0.5, y: 0.5 });
+    const rafId = useRef(null);
 
     useEffect(() => {
         // Only run on client
@@ -13,6 +15,20 @@ export default function PhotocopyBackground() {
         let mounted = true;
         let idleId;
         let p5Instance = null;
+
+        const handleMouseMove = (e) => {
+            const { clientX, clientY } = e;
+            const { innerWidth, innerHeight } = window;
+            const x = Math.max(0, Math.min(1, clientX / innerWidth));
+            const y = Math.max(0, Math.min(1, clientY / innerHeight));
+            mousePosRef.current = { x, y };
+            if (rafId.current === null && p5Ref.current && typeof p5Ref.current.redraw === 'function') {
+                rafId.current = requestAnimationFrame(() => {
+                    p5Ref.current.redraw();
+                    rafId.current = null;
+                });
+            }
+        };
 
         const initP5 = async () => {
             const p5 = (await import('p5')).default;
@@ -28,9 +44,17 @@ export default function PhotocopyBackground() {
                     const W = p.width;
                     const H = p.height;
 
+                    const mx = mousePosRef.current.x;
+                    const my = mousePosRef.current.y;
+                    const offsetY = (my - 0.5) * 0.2;
+                    const tiltBase = 40;
+                    const tilt = tiltBase + (mx - 0.5) * 80;
+
                     // ---- base gradient (top → bottom, multi-stop) ----
                     for (let y = 0; y < H; y++) {
-                        const t = y / H;
+                        let t = y / H + offsetY;
+                        if (t < 0) t = 0;
+                        if (t > 1) t = 1;
                         let col;
 
                         if (t < 0.1)
@@ -56,7 +80,7 @@ export default function PhotocopyBackground() {
                     p.noStroke();
                     for (let y = 0; y < H; y += 1) {
                         const shade = 200 + r(40);
-                        const dy = y + r(TILT) - TILT / 2;
+                        const dy = y + r(tilt) - tilt / 2;
                         p.fill(shade, 0.12 * 255);
                         p.rect(0, dy, W, 1);
                     }
@@ -65,7 +89,7 @@ export default function PhotocopyBackground() {
                     for (let i = 0; i < 18; i++) {
                         const baseY = r(H);
                         const h = 9 + r(90);
-                        const dy = baseY + r(TILT) - TILT / 2;
+                        const dy = baseY + r(tilt) - tilt / 2;
                         p.fill(0, r(0.3) * 255 * 0.08);
                         p.rect(0, dy, W, h);
                     }
@@ -75,8 +99,8 @@ export default function PhotocopyBackground() {
                     p.strokeWeight(0.2);
                     for (let i = 0; i < 30; i++) {
                         const baseY = r(H);
-                        const dyStart = baseY + r(TILT) - TILT / 2;
-                        const dyEnd = dyStart + (r(TILT) - TILT / 2);
+                        const dyStart = baseY + r(tilt) - tilt / 2;
+                        const dyEnd = dyStart + (r(tilt) - tilt / 2);
                         p.line(0, dyStart, W, dyEnd);
                     }
 
@@ -114,6 +138,7 @@ export default function PhotocopyBackground() {
                     if (w <= 0) w = 1;
                     if (h <= 0) h = 1;
                     p.createCanvas(w, h);
+                    p.pixelDensity(1);
                     p.noLoop();
                     drawTexture();
                 };
@@ -126,6 +151,7 @@ export default function PhotocopyBackground() {
                     if (w <= 0) w = 1;
                     if (h <= 0) h = 1;
                     p.resizeCanvas(w, h);
+                    p.pixelDensity(1);
                     drawTexture();
                 };
             };
@@ -144,16 +170,22 @@ export default function PhotocopyBackground() {
         };
 
         scheduleP5();
+        window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
         return () => {
             mounted = false;
             if (idleId && window.cancelIdleCallback) {
                 window.cancelIdleCallback(idleId);
             }
+            if (rafId.current) {
+                cancelAnimationFrame(rafId.current);
+                rafId.current = null;
+            }
             if (p5Ref.current) {
                 p5Ref.current.remove();
                 p5Ref.current = null;
             }
+            window.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
 
