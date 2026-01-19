@@ -1,11 +1,11 @@
 @use "tailwindcss";
 @use "./colors";
 
-
 :root {
   --background: colors.$base;
   --foreground: colors.$secondary;
   --primary: colors.$primary;
+  /* The font variables are set by the Next.js font loader in _document.js */
 }
 
 @theme inline {
@@ -26,21 +26,19 @@
 body {
   background: colors.$base;
   color: colors.$secondary;
+  /* Ensure the default font uses the variable */
+  font-family: var(--font-sans);
 }
 
 ::selection{
-  /*background-color: none;*/
   color: #00587B;
   background-color: #67B698;
 }
-
 
 a{
     color: colors.$secondary;
     &:hover{
         color: colors.$tertiary--hover;
     }
-    
-
 }
 
