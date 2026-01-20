@@ -17,20 +17,20 @@ The site is built with a modern stack that combines high‑performance web techn
 ## Prerequisites
 
 - Node.js (LTS v22.17.1 or later)
-- npm (or yarn, pnpm, bun)
+- yarn (recommended) or npm, pnpm, bun
 
 ## Getting Started
 
 First, clone the repository and install dependencies:
 
 ```bash
-npm install
+yarn
 ```
 
 Then, run the development server:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the site.
@@ -40,13 +40,13 @@ The development server uses **Turbopack** for lightning‑fast hot module replac
 ## Building for Production
 
 ```bash
-npm run build
+yarn build
 ```
 
 Then start the production server:
 
 ```bash
-npm start
+yarn start
 ```
 
 ## Project Structure
@@ -63,17 +63,11 @@ npm start
 - **Optimized Fonts**: Fonts are loaded via `next/font` (Libre Franklin and Fira Mono) for optimal performance.
 - **Content‑Ready**: MDX support allows for rich content pages that mix Markdown and React components.
 
-## Learn More
+## Resources
 
-To learn more about the technologies used in this project:
+Useful documentation for the technologies used in this project:
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS v4 Documentation](https://tailwindcss.com/docs)
 - [p5.js Reference](https://p5js.org/reference/)
 - [MDX Documentation](https://mdxjs.com/)
-
-## Deploy on Vercel
-
-The easiest way to deploy this Next.js site is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
