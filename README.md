@@ -1,6 +1,6 @@
 # Grand Format – Product Design & Development Agency
 
-This is the official website for [**Grand Format**](https://grandformat.xyz), a Los Angeles-based product design and development agency run by @michaelappuhn.
+This is the official website for [**Grand Format**](https://grandformat.xyz), a Los Angeles-based product design and development agency run by [@michaelappuhn](https://github.com/michaelappuhn/).
 
 ## Tech Stack
 
