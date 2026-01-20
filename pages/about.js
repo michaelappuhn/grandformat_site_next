@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { instrument, spaceGrotesk } from "@/styles/font";
-import { libreFranklin,firaMono } from "@/styles/font";
+import { firaMono, libreFranklin } from "@/styles/font";
 import {Nav, Navitem} from "@/components/navbar";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
 
@@ -34,7 +33,7 @@ export default function About() {
                     page_head
                     varCondensedBold 
                     md:text-[60pt]
-                    text-[60pt]
+                    text-[22pt]
                 `}>
                     About
             </h1>
