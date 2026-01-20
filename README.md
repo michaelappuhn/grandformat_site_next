@@ -1,40 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Grand Format – Product Design & Development Agency
+
+This is the official website for **Grand Format**, a product design and development agency that solves wicked problems by building tools and services around the needs of our clients’ customers and teams.
+
+The site is built with a modern stack that combines high‑performance web technologies with generative visual design.
+
+## Tech Stack
+
+- **Next.js 15.5.9** (Pages Router) – with Turbopack for instant development updates
+- **React 19.1.0** – with the latest React features
+- **Tailwind CSS v4** – for utility‑first styling
+- **Sass/SCSS** – for custom styles and theming
+- **p5.js 2.2.0** – for the interactive, generative background
+- **MDX** – for content‑rich pages
+- **Node.js** – using LTS v22.17.1
+
+## Prerequisites
+
+- Node.js (LTS v22.17.1 or later)
+- npm (or yarn, pnpm, bun)
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository and install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the site.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+The development server uses **Turbopack** for lightning‑fast hot module replacement (HMR).
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Building for Production
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Then start the production server:
+
+```bash
+npm start
+```
+
+## Project Structure
+
+- `pages/` – Next.js Pages Router pages (`.js` and `.jsx`)
+- `components/` – React components (`.jsx`) with accompanying SCSS modules
+- `styles/` – Global SCSS, Tailwind, and color variables
+- `public/` – Static assets (icons, images, etc.)
+
+## Key Features
+
+- **Generative Background**: The `PhotocopyBackground` component uses p5.js to create a dynamic, mouse‑responsive texture that evokes the look of a photocopied document.
+- **Responsive & Accessible**: Built with Tailwind CSS for a fully responsive layout and semantic HTML for accessibility.
+- **Optimized Fonts**: Fonts are loaded via `next/font` (Libre Franklin and Fira Mono) for optimal performance.
+- **Content‑Ready**: MDX support allows for rich content pages that mix Markdown and React components.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS v4 Documentation](https://tailwindcss.com/docs)
+- [p5.js Reference](https://p5js.org/reference/)
+- [MDX Documentation](https://mdxjs.com/)
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy this Next.js site is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
