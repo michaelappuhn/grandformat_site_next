@@ -1,8 +1,6 @@
 # Grand Format – Product Design & Development Agency
 
-This is the official website for **Grand Format**, a product design and development agency that solves wicked problems by building tools and services around the needs of our clients’ customers and teams.
-
-The site is built with a modern stack that combines high‑performance web technologies with generative visual design.
+This is the official website for [**Grand Format**](https://grandformat.xyz), a Los Angeles-based product design and development agency run by @michaelappuhn.
 
 ## Tech Stack
 
