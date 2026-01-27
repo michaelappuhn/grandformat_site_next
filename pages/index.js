@@ -22,18 +22,6 @@ export default function Home() {
 
             </main>
 
-            <section className={`
-                font-sans
-                approachBanner
-                ml-[-2rem] mr-[-2rem]
-                sm:ml-[-5rem] sm:mr-[-5rem]
-                row-start-3
-            `}>
-                <div className="">
-                    <h2>Our approach</h2>
-                </div>
-            </section>
-
         </div>
   );
 }
