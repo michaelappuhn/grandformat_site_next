@@ -3,6 +3,7 @@ import {Nav} from "@/components/navbar";
 import Dek from "@/components/Dek";
 import Logo from "@/components/Logo";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
+import OurTake from "@/components/homepage/ourtake.mdx";
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
             <Logo />
             <Nav />
             <Dek />
+            <OurTake />
 
             </main>
 
