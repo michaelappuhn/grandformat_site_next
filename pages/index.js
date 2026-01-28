@@ -6,6 +6,7 @@ import PhotocopyBackground from "@/components/PhotocopyBackground";
 import OurTake from "@/components/homepage/ourtake.mdx";
 import WhatWeOffer from "@/components/homepage/what_we_offer.mdx";
 import HowWeWork from "@/components/homepage/how_we_work.mdx";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default function Home() {
     return (
@@ -22,22 +23,30 @@ export default function Home() {
             <Nav />
 
 
-            <div class="mt-20 mb-25 dek">
-                <Dek />
+            <div className="mt-20 mb-25 dek">
+                <AnimateOnScroll>
+                    <Dek />
+                </AnimateOnScroll>
             </div>
 
-            <div class="mb-50 take">
+            <div className="mb-50 take">
                 <a id="our_take"></a>
-                <OurTake />
+                <AnimateOnScroll>
+                    <OurTake />
+                </AnimateOnScroll>
             </div>
 
-            <div class="mb-50 offer">
+            <div className="mb-50 offer">
                 <a id="what_we_offer"></a>
-                <WhatWeOffer/>
+                <AnimateOnScroll>
+                    <WhatWeOffer/>
+                </AnimateOnScroll>
             </div>
-            <div class="mb-70 how">
+            <div className="mb-70 how">
                 <a id="how_we_work"></a>
-                <HowWeWork />
+                <AnimateOnScroll>
+                    <HowWeWork />
+                </AnimateOnScroll>
             </div>
 
             </main>
