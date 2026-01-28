@@ -25,9 +25,9 @@ export default function useScrollAnimation(options = {}) {
                     // Animation: fade in + slide from left
                     animate(element, {
                         opacity: [0, 1],
-                        y: ['1.5em', '0'],
+                        x: ['-0.5em', '0'],
                         duration: 400,
-                        ease: 'easeInQuad',
+                        ease: 'easeOutQuad',
                     });
                     if (once) observer.unobserve(element);
                 }
