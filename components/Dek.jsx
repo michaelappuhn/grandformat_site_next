@@ -6,15 +6,13 @@ export default function Dek() {
     return (
         <div
          >
-        <p
+        <h3
             className={`
-                text-[14pt]
-                ${styles.lede}
             `}
         
         >
-            A design and development studio focused on solving <a href="https://en.wikipedia.org/wiki/Wicked_problem" target="_blank" rel="noreferrer">wicked problems</a>.
-        </p>
+            An innovation studio, focused on solving hard business problems.
+        </h3>
         <h1
             className={`
                 ${libreFranklin.className} 

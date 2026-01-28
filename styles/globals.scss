@@ -42,3 +42,37 @@ a{
     }
 }
 
+
+h2{
+color: #FFF;
+font-family: "Libre Franklin";
+font-size: 40px;
+font-style: normal;
+font-weight: 800;
+line-height: 89px; /* 222.5% */
+letter-spacing: -0.8px;
+text-transform: uppercase;
+}
+
+h4{
+  color: colors.$primary;
+  font-family: "Libre Franklin";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 109.091% */
+  letter-spacing: -0.44px;
+}
+
+h3{
+  color: #41FF17;
+  font-family: "Fira Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 22px; /* 137.5% */
+}
+
+p{
+  color: colors.$primary;
+}

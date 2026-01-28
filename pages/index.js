@@ -4,6 +4,7 @@ import Dek from "@/components/Dek";
 import Logo from "@/components/Logo";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
 import OurTake from "@/components/homepage/ourtake.mdx";
+import WhatWeOffer from "@/components/homepage/what_we_offer.mdx";
 
 export default function Home() {
     return (
@@ -19,6 +20,7 @@ export default function Home() {
             <Nav />
             <Dek />
             <OurTake />
+            <WhatWeOffer/>
 
             </main>
 
