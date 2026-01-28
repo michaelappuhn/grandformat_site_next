@@ -23,12 +23,11 @@ export default function useScrollAnimation(options = {}) {
                 if (entry.isIntersecting && (!once || !hasAnimated.current)) {
                     hasAnimated.current = true;
                     // Animation: fade in + slide from left
-                    animate({
-                        targets: element,
+                    animate(element, {
                         opacity: [0, 1],
-                        translateX: ['-0.5em', '0'],
+                        x: ['-0.5em', '0'],
                         duration: 400,
-                        easing: 'easeOutQuad',
+                        ease: 'easeOutQuad',
                     });
                     if (once) observer.unobserve(element);
                 }
