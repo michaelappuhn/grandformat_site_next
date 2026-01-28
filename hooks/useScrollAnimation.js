@@ -27,7 +27,7 @@ export default function useScrollAnimation(options = {}) {
                         opacity: [0, 1],
                         x: ['-0.5em', '0'],
                         duration: 400,
-                        easing: 'easeOutQuad',
+                        ease: 'easeOutQuad',
                     });
                     if (once) observer.unobserve(element);
                 }

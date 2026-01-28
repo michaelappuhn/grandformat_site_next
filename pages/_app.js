@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }) {
       anime(scrollObj, {
         y: targetTop,
         duration: 400,
-        easing: 'easeOutQuad',
+        ease: 'easeOutQuad',
         update: () => {
           window.scrollTo(0, scrollObj.y);
         },
