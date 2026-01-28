@@ -18,4 +18,7 @@ fi
 echo "Creating zip archive from out/..."
 cd out && zip -r ../out.zip .
 
+cd ../
 echo "Zip archive created: ./out.zip"
+open -R ./out.zip
+
