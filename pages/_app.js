@@ -2,7 +2,7 @@ import "@/styles/globals.scss";
 import "@/styles/pages/index.scss";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { useEffect } from 'react';
-import { anime } from 'animejs';
+import { animate as anime } from 'animejs';
 
 
 export default function App({ Component, pageProps }) {
@@ -25,8 +25,7 @@ export default function App({ Component, pageProps }) {
       const offset = header ? header.offsetHeight : 0;
       const targetTop = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
       const scrollObj = { y: window.scrollY };
-      anime({
-        targets: scrollObj,
+      anime(scrollObj, {
         y: targetTop,
         duration: 400,
         easing: 'easeOutQuad',
