@@ -2,7 +2,6 @@ import "@/styles/globals.scss";
 import "@/styles/pages/index.scss";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { useEffect } from 'react';
-import { animate} from 'animejs';
 
 
 export default function App({ Component, pageProps }) {
@@ -24,19 +23,13 @@ export default function App({ Component, pageProps }) {
       const header = document.querySelector('header');
       const offset = header ? header.offsetHeight : 0;
       const targetTop = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
-      const scrollObj = { y: window.scrollY };
-      animate(scrollObj, {
-        y: targetTop,
-        duration: 400,
-        ease: 'easeOutQuad',
-        update: () => {
-          window.scrollTo(0, scrollObj.y);
-        },
-        complete: () => {
-          // Update URL hash without scrolling
-          window.history.pushState(null, null, href);
-        },
+      // Use smooth scroll behavior
+      window.scrollTo({
+        top: targetTop,
+        behavior: 'smooth'
       });
+      // Update URL hash without scrolling
+      window.history.pushState(null, null, href);
     };
 
     document.addEventListener('click', handleClick);
