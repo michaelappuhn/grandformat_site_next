@@ -11,7 +11,7 @@ export default function Dek() {
             `}
         
         >
-            An innovation studio, focused on solving hard business problems.
+            A design and development studio, that solves hard business problems.
         </h3>
         <h1
             className={`
@@ -20,8 +20,9 @@ export default function Dek() {
                 dek 
                 text-[22pt] 
                 md:text-[34pt] 
+                font-weight-[700]
                 leading-[1.23]
-                mt-[25pt]
+                mt-[10pt]
             `}
         >
             We help small teams work like tech companies.

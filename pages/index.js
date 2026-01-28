@@ -17,7 +17,7 @@ export default function Home() {
             <main 
               className="flex flex-col gap-[10px] row-start-2 sm:items-start max-w-[665px] mx-auto w-full"
             >
-
+            <a id="home"></a>
             <Logo />
             <Nav />
 
@@ -27,14 +27,17 @@ export default function Home() {
             </div>
 
             <div class="mb-50 take">
+                <a id="our_take"></a>
                 <OurTake />
             </div>
 
             <div class="mb-50 offer">
+                <a id="what_we_offer"></a>
                 <WhatWeOffer/>
             </div>
             <div class="mb-70 how">
-            <HowWeWork />
+                <a id="how_we_work"></a>
+                <HowWeWork />
             </div>
 
             </main>

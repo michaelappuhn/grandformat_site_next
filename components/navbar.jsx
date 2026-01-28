@@ -2,10 +2,11 @@ import { libreFranklin,firaMono } from "@/styles/font";
 import styles from "./navbar.module.scss";
 
 const nav_items = [
-    {text: 'Home', url: '/'},
-    {text: 'About', url: '/about'},
-    {text: 'Services', url: '/services'},
-    {text: 'Contact', url: '/contact'},
+    {text: 'Home', url: '#home'},
+    {text: 'Our Take', url: '#our_take'},
+    {text: 'What We Offer', url: '#what_we_offer'},
+    {text: 'How We Work', url: '#how_we_work'},
+    {text: 'Contact', url: '#contact'},
 
 ];
 
