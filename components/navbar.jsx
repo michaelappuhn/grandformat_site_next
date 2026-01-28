@@ -15,7 +15,12 @@ export function Nav () {
           <header className="
             {styles.navbar}
             ${firaMono.className}
-            sticky top-0 flex gap-[50px] flex-wrap 
+            sticky 
+            top-0 
+            flex 
+            gap-x-[50px] 
+            gap-y-[20px] 
+            flex-wrap 
             mt-[12pt]
             leading-[1]
         ">
