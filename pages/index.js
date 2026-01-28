@@ -12,7 +12,7 @@ import StickyWrapper from "@/components/StickyWrapper";
 export default function Home() {
     return (
         <div
-            className={`font-sans grid grid-rows-[10px_1fr_auto] min-h-screen p-8 pb-20 gap-1 sm:p-20 relative overflow-y-auto`}
+            className={`font-sans grid grid-rows-[10px_1fr_auto] min-h-screen p-8 pb-20 gap-1 sm:p-20 relative overflow-x-hidden`}
         >
             <PhotocopyBackground />
 
