@@ -16,10 +16,10 @@ export default function Home() {
         >
             <PhotocopyBackground />
 
+            <a id="home"></a>
             <main 
               className="flex flex-col gap-[10px] row-start-2 sm:items-start max-w-[665px] mx-auto w-full"
             >
-            <a id="home"></a>
             <StickyWrapper>
                 <Logo />
                 <Nav />
@@ -32,15 +32,15 @@ export default function Home() {
                 </AnimateOnScroll>
             </div>
 
+            <a id="our_take"></a>
             <div className="mb-50 take">
-                <a id="our_take"></a>
                 <AnimateOnScroll>
                     <OurTake />
                 </AnimateOnScroll>
             </div>
 
+            <a id="what_we_offer"></a>
             <div className="mb-50 offer">
-                <a id="what_we_offer"></a>
                 <AnimateOnScroll>
                     <WhatWeOffer/>
                 </AnimateOnScroll>

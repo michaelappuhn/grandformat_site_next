@@ -21,13 +21,11 @@ export default function StickyWrapper({ children }) {
             ref={wrapperRef}
             className={`sticky-wrapper ${
                 isSticky
-                    ? 'sticky top-0 z-50 bg-white shadow-md pl-[50px] pr-[50px]'
+                    ? 'sticky top-0 z-50'
                     : 'relative'
             } transition-all duration-300 w-full`}
         >
-            <div className={`${isSticky ? 'flex justify-between items-center w-full' : ''}`}>
-                {children}
-            </div>
+            {children}
         </div>
     );
 }
