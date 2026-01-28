@@ -15,14 +15,27 @@ export default function Home() {
             <PhotocopyBackground />
 
             <main 
-              className="flex flex-col gap-[10px] row-start-2 sm:items-start max-w-[600px] mx-auto w-full"
+              className="flex flex-col gap-[10px] row-start-2 sm:items-start max-w-[665px] mx-auto w-full"
             >
+
             <Logo />
             <Nav />
-            <Dek />
-            <OurTake />
-            <WhatWeOffer/>
+
+
+            <div class="mt-20 mb-50 dek">
+                <Dek />
+            </div>
+
+            <div class="mb-50 take">
+                <OurTake />
+            </div>
+
+            <div class="mb-50 offer">
+                <WhatWeOffer/>
+            </div>
+            <div class="mb-70 how">
             <HowWeWork />
+            </div>
 
             </main>
 

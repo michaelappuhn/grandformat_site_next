@@ -24,7 +24,7 @@ export default function Dek() {
                 mt-[25pt]
             `}
         >
-            We build tools and services around the needs of our clients’ customers and teams.
+            We help small teams work like tech companies.
         </h1></div
         >
     );

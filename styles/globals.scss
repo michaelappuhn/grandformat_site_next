@@ -44,14 +44,26 @@ a{
 
 
 h2{
-color: #FFF;
-font-family: "Libre Franklin";
-font-size: 40px;
-font-style: normal;
-font-weight: 800;
-line-height: 89px; /* 222.5% */
-letter-spacing: -0.8px;
-text-transform: uppercase;
+  color: #FFF;
+  font-family: "Libre Franklin";
+  font-size: 40pt;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 222.5% */
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h3{
+  color: colors.$secondary;
+  font-family: "Fira Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 22px; /* 137.5% */
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 h4{
@@ -62,17 +74,15 @@ h4{
   font-weight: 700;
   line-height: 24px; /* 109.091% */
   letter-spacing: -0.44px;
+  margin-bottom: 10px;
 }
 
-h3{
-  color: colors.$secondary;
-  font-family: "Fira Mono";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 22px; /* 137.5% */
-}
 
 p{
   color: colors.$primary;
+  font-size: 14pt;
+}
+
+.offer p:first-of-type{
+  font-size: 28px;
 }
