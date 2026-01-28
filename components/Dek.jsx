@@ -6,15 +6,13 @@ export default function Dek() {
     return (
         <div
          >
-        <p
+        <h3
             className={`
-                text-[14pt]
-                ${styles.lede}
             `}
         
         >
-            A design and development studio focused on solving <a href="https://en.wikipedia.org/wiki/Wicked_problem" target="_blank" rel="noreferrer">wicked problems</a>.
-        </p>
+            A design and development studio, that solves hard business problems.
+        </h3>
         <h1
             className={`
                 ${libreFranklin.className} 
@@ -22,11 +20,12 @@ export default function Dek() {
                 dek 
                 text-[22pt] 
                 md:text-[34pt] 
+                font-weight-[700]
                 leading-[1.23]
-                mt-[25pt]
+                mt-[10pt]
             `}
         >
-            We build tools and services around the needs of our clients’ customers and teams.
+            We help small teams work like tech companies.
         </h1></div
         >
     );

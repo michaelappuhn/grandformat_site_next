@@ -42,3 +42,66 @@ a{
     }
 }
 
+
+
+// SPACING
+
+h2{
+  margin-bottom: 20px;
+}
+
+h3{
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+h4{
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20pt;
+}
+
+// TYPE
+h2{
+  color: #FFF;
+  font-family: "Libre Franklin";
+  font-size: 40pt;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 222.5% */
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+h3{
+  color: colors.$secondary;
+  font-family: "Fira Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 22px; /* 137.5% */
+}
+
+h4{
+  color: colors.$primary;
+  font-family: "Libre Franklin";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 109.091% */
+  letter-spacing: -0.44px;
+}
+
+
+p{
+  color: colors.$primary;
+  font-size: 14pt;
+  line-height: 150%;
+}
+
+.offer p:first-of-type{
+  font-size: 28px;
+  line-height: 140%;
+}

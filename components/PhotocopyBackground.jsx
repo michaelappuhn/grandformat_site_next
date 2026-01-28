@@ -195,7 +195,7 @@ export default function PhotocopyBackground() {
         <div
             ref={containerRef}
             style={{
-                position: 'absolute',
+                position: 'fixed',
                 top: 0,
                 left: 0,
                 width: '100%',
@@ -204,6 +204,7 @@ export default function PhotocopyBackground() {
                 overflow: 'hidden',
                 backgroundImage: backgroundGradient,
                 backgroundSize: '100% 100%',
+                pointerEvents: 'none',
             }}
         />
     );
