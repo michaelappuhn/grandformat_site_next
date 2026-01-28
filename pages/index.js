@@ -7,24 +7,9 @@ import OurTake from "@/components/homepage/ourtake.mdx";
 import WhatWeOffer from "@/components/homepage/what_we_offer.mdx";
 import HowWeWork from "@/components/homepage/how_we_work.mdx";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { useState, useEffect, useRef } from 'react';
+import StickyWrapper from "@/components/StickyWrapper";
 
 export default function Home() {
-    const [isSticky, setIsSticky] = useState(false);
-    const wrapperRef = useRef(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (!wrapperRef.current) return;
-            const wrapperHeight = wrapperRef.current.offsetHeight;
-            const scrolledPast = window.scrollY > wrapperHeight;
-            setIsSticky(scrolledPast);
-        };
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // initial
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
         <div
             className={`font-sans grid grid-rows-[10px_1fr_auto] min-h-screen p-8 pb-20 gap-1 sm:p-20 relative overflow-y-auto`}
@@ -35,10 +20,10 @@ export default function Home() {
               className="flex flex-col gap-[10px] row-start-2 sm:items-start max-w-[665px] mx-auto w-full"
             >
             <a id="home"></a>
-            <div ref={wrapperRef} className={`sticky-wrapper ${isSticky ? 'sticky top-0 z-50 bg-white shadow-md' : 'relative'} transition-all duration-300`}>
+            <StickyWrapper>
                 <Logo />
                 <Nav />
-            </div>
+            </StickyWrapper>
 
 
             <div className="mt-20 mb-25 dek">
