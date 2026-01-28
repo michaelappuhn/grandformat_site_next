@@ -22,7 +22,7 @@ export default function Home() {
             <Nav />
 
 
-            <div class="mt-20 mb-50 dek">
+            <div class="mt-20 mb-25 dek">
                 <Dek />
             </div>
 
