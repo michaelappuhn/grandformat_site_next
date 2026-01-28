@@ -15,7 +15,7 @@ export default function Home() {
             <PhotocopyBackground />
 
             <main 
-              className="flex flex-col gap-[10px] row-start-2 sm:items-start"
+              className="flex flex-col gap-[10px] row-start-2 sm:items-start max-w-[600px] mx-auto w-full"
             >
             <Logo />
             <Nav />
