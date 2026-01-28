@@ -9,7 +9,7 @@ import WhatWeOffer from "@/components/homepage/what_we_offer.mdx";
 export default function Home() {
     return (
         <div
-            className={`font-sans grid grid-rows-[10px_1fr_auto] min-h-screen p-8 pb-20 gap-1 sm:p-20 relative overflow-hidden`}
+            className={`font-sans grid grid-rows-[10px_1fr_auto] min-h-screen p-8 pb-20 gap-1 sm:p-20 relative overflow-y-auto`}
         >
             <PhotocopyBackground />
 
