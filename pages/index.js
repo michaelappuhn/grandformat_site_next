@@ -5,6 +5,7 @@ import Logo from "@/components/Logo";
 import PhotocopyBackground from "@/components/PhotocopyBackground";
 import OurTake from "@/components/homepage/ourtake.mdx";
 import WhatWeOffer from "@/components/homepage/what_we_offer.mdx";
+import HowWeWork from "@/components/homepage/how_we_work.mdx";
 
 export default function Home() {
     return (
@@ -21,6 +22,7 @@ export default function Home() {
             <Dek />
             <OurTake />
             <WhatWeOffer/>
+            <HowWeWork />
 
             </main>
 
