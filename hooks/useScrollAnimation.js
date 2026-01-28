@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import anime from 'animejs';
+import { anime } from 'animejs';
 
 /**
  * Custom hook that triggers an anime.js animation when the referenced element enters the viewport.
@@ -23,11 +23,12 @@ export default function useScrollAnimation(options = {}) {
                 if (entry.isIntersecting && (!once || !hasAnimated.current)) {
                     hasAnimated.current = true;
                     // Animation: fade in + slide from left
-                    anime(element, {
+                    anime({
+                        targets: element,
                         opacity: [0, 1],
                         x: ['-0.5em', '0'],
                         duration: 400,
-                        ease: 'easeOutQuad',
+                        easing: 'easeOutQuad',
                     });
                     if (once) observer.unobserve(element);
                 }

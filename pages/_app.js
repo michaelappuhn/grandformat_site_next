@@ -2,7 +2,7 @@ import "@/styles/globals.scss";
 import "@/styles/pages/index.scss";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { useEffect } from 'react';
-import anime from 'animejs';
+import { anime } from 'animejs';
 
 
 export default function App({ Component, pageProps }) {
