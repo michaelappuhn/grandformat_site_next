@@ -26,7 +26,7 @@ export default function Home() {
             </StickyWrapper>
 
 
-            <div className="mt-20 mb-25 dek">
+            <div className="mt-20 mb-30 md-mb-50 dek">
                 <AnimateOnScroll>
                     <Dek />
                 </AnimateOnScroll>
@@ -45,10 +45,18 @@ export default function Home() {
                     <WhatWeOffer/>
                 </AnimateOnScroll>
             </div>
-            <div className="mb-70 how">
+            <div className="mb-50 how">
                 <a id="how_we_work"></a>
                 <AnimateOnScroll>
                     <HowWeWork />
+                </AnimateOnScroll>
+            </div>
+            <a name="contact"></a>
+            <div className="mb-60 md-mb-1000 contact">
+                <AnimateOnScroll>
+                    <h2>Contact us</h2>
+                    <p>To connect, reach us at <a href="mailto:info@grandformat.xyz">info@grandformat.xyz</a>.</p>
+                    <p>We're happy to discuss new projects, problems you're facing, and how we can help.</p>
                 </AnimateOnScroll>
             </div>
 

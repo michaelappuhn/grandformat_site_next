@@ -8,7 +8,7 @@ export default function AnimateOnScroll({
     children, 
     once = true, 
     offset = 0, 
-    threshold = 0.5,
+    threshold = 0.2,
     ...rest 
 }) {
     const ref = useScrollAnimation({ once, offset, threshold });
