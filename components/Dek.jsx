@@ -11,7 +11,7 @@ export default function Dek() {
             `}
         
         >
-            A design and development studio, that solves hard business problems.
+            A Los Angeles-based design and development studio, that solves hard business problems.
         </h3>
         <h1
             className={`

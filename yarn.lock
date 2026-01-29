@@ -1267,6 +1267,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"animejs@npm:^4.3.5":
+  version: 4.3.5
+  resolution: "animejs@npm:4.3.5"
+  checksum: 10c0/753319575c39ed746592a911f179741b9258c4baac6ed7f3b1b6293c4e65eeebc2dfe50ceaf417c60544284873ae269e939b0d5d3cf810655294e9eee8ea1e46
+  languageName: node
+  linkType: hard
+
 "ansi-regex@npm:^5.0.1":
   version: 5.0.1
   resolution: "ansi-regex@npm:5.0.1"
@@ -1838,6 +1845,7 @@ __metadata:
     "@types/mdx": "npm:^2.0.13"
     "@types/react": "npm:^19.1.0"
     "@types/react-dom": "npm:^19.1.0"
+    animejs: "npm:^4.3.5"
     install: "npm:^0.13.0"
     next: "npm:^16.1.4"
     node-fetch: "npm:^3.3.2"

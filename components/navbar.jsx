@@ -12,13 +12,16 @@ const nav_items = [
 
 export function Nav () {
     return (
-          <header className="
-            {styles.navbar}
+          <header className={`
+            ${styles.navbar}
             ${firaMono.className}
-            sticky top-0 flex gap-[50px] flex-wrap 
+            flex 
+            gap-x-[50px] 
+            gap-y-[20px] 
+            flex-wrap 
             mt-[12pt]
             leading-[1]
-        ">
+        `}>
 
       {nav_items.map((item, index) => (
        <Navitem
